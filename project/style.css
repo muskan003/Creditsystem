@@ -1,0 +1,200 @@
+*{ margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+    }
+
+
+
+html{
+    height: 100%;
+}
+body{
+   /* background-color: rgb(105, 238, 255); */
+    background-image:linear-gradient(rgba(0, 0, 0, 0.8),rgba(0,0,0,0.6)),url(images/try16.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    
+    
+    position: relative;
+}
+
+.navb{
+ height: 80px;
+
+}
+.nav-logo img{
+    width: 150px;
+    position: absolute;
+    top: 17px;
+    left: 12%;
+}
+.navb ul{
+    float: right;
+    margin-right: 25px;
+
+}
+.navb ul li{
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 15px;
+
+}
+.navb ul li a{
+    position: relative;
+    color: white;
+    font-size: 18px;
+    text-decoration: none;
+    padding: 10px 0 ;
+
+}
+.navb ul li a:before{
+    position: absolute;
+    content: '';
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 100%;
+    background: crimson;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.4s linear;
+
+}
+.navb ul li a:hover:before{
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+.index{
+    margin: 80px 130px;
+    color: white;
+}
+.index h1{
+    font-size: 64px;
+    margin-bottom: 30px;
+}
+.index2{
+    margin: 30px 60px;
+}
+.index3{
+    margin: 80px 130px;
+}
+
+.table{
+  
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 5px 5px 0 0 ;
+   
+}
+    .table tbody tr{
+        background-color: rgba(223, 209, 209, 0.248) ;
+        color: white;
+         }
+         .table thead{
+             background-color: crimson;
+             color: white;
+         }
+
+
+.select{
+    padding: 8px 12px;
+    background-color:white ; 
+    cursor: pointer;
+    border-radius: 5px;
+    color:black;
+ }
+ .select:focus,
+ .select:hover{
+     outline: none;
+     border: 1px solid black;
+ }
+ .select option{
+     background-color:black;
+     color:black;
+      
+    }
+
+button{
+    background-color:rgba(223, 209, 209, 0.248) ;
+    padding: 8px 12px;
+    border-radius: 5px;
+    color: white;
+
+}
+.index3{
+    background-color:  rgba(223, 209, 209, 0.248);
+    border-radius: 15px 15px 0 0 ;
+    padding: 10px 10px 10px 10px;
+    color: white;
+}
+
+label #btn,
+label #cancel{
+color:white;
+font-size: 30px;
+float: right;
+line-height: 80px;
+margin-right: 40px;
+display: none;
+cursor: pointer;
+position: absolute;
+}
+#check{
+    display: none;
+}
+
+@media (max-width:700px){
+    .nav-logo{
+    left: 6%;
+    }
+.index{
+    margin: 80px 40px;
+}
+.index h1{
+    font-size: 50px;
+}
+/*.nav-bar{
+    padding: 10px 30px;
+}*/
+label #btn{
+    display: block;
+}
+.navb ul li a{
+    font-size: 17px;
+}
+
+ul{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: black;
+    top: 80px;
+    left:-100%;
+    text-align: center;
+    transition: all 0.5s;
+
+}
+.navb ul li{
+    display: block;
+    line-height: 30px;
+    margin: 50px 0;
+}
+.index2{
+    margin: 30px 20px;
+}
+
+#check:checked~ul{
+    left: 0;
+}
+#check:checked~label #btn{
+    display: none;
+}
+#check:checked~label #cancel{
+    display: block;
+}
+.index3{
+    margin: 40px 20px;
+}
+}
